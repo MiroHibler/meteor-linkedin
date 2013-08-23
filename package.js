@@ -7,6 +7,11 @@ Package.on_use(function(api) {
   api.use('http', ['client', 'server']);
   api.use('templating', 'client');
 
+  // v0.6.5
+  api.use('oauth', ['client', 'server']);
+  api.use(['underscore', 'service-configuration'], ['client', 'server']);
+  api.export('LinkedIn');
+
   api.add_files(
     ['linkedin_configure.html', 'linkedin_configure.js'],
     'client');
